@@ -1,9 +1,9 @@
 <template>
-  <Head v-if="images">
+  <Head v-if="data">
     <Title>
       {{ data.name }}
     </Title>
-    <Meta name="og:image" :content="images[0].url" />
+    <Meta name="og:image" :content="data.images[0].file.url" />
   </Head>
   <section class="product">
     <div class="container">
@@ -170,8 +170,7 @@ export default {
       this.images[img] = obj
     }
     const AsArray = Object.entries(this.images);
-    const a = AsArray.filter(item => item[1].status)
-    console.log(a)
+    const a = AsArray.filter(item => item[1].status);
   },
   methods: {
     SetVariable(nameO, nameV) {
