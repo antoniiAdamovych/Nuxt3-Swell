@@ -1,0 +1,478 @@
+$font: 'Roboto Condensed', sans-serif
+$color: #19501e
+
+*
+    box-sizing: border-box
+
+body
+    margin: 0
+    padding: 0
+    font-family: $font
+.container
+    width: 1170px
+    margin: 0 auto
+.hide
+    transform: translate(1000px, 0)
+.cart
+    width: 400px
+    position: fixed
+    z-index: 10
+    transition: all 0.9s ease
+    right: 0
+    top: 0
+    height: 100vh
+    background: white
+    border: 1px solid $color
+    padding: 15px
+    .close
+        position: absolute
+        right: 10px
+        top: 26px
+        cursor: pointer
+    h4
+        font-size: 30px
+        margin: 10px 0
+    .productsCart
+        height: 80%
+        width: 100%
+        overflow: scroll
+        overflow-x: hidden
+        .prod
+            display: flex
+            gap: 10px
+            padding: 10px
+            margin-bottom: 20px
+            img
+                width: 130px
+                height: 130px
+                aspect-ratio: 1/1
+                object-fit: cover
+                border-radius: 10px
+            .infos
+                display: flex
+                flex-direction: column
+                gap: 5px
+                border: none
+                .options
+                    display: flex
+                    div
+                        border: 1px solid $color
+                        padding: 1px 5px
+                        border-radius: 10px
+                p
+                    margin: 5px 0
+                    font-size: 16px
+                h5
+                    margin: 0
+                    font-size: 20px
+                    width: 154px
+                .quantitity
+                    border: none
+                    display: flex
+                    p
+                        width: 30px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                    button
+                        width: 30px
+                        background: none
+                        border: 1px solid black
+                        cursor: pointer
+                        transition: all 0.9s ease
+                    button:hover
+                        border: 1px solid $color
+            .delete
+                border: none
+                cursor: pointer
+                width: 20px
+    .checkout
+        width: 100%
+        display: flex
+        justify-content: center
+        position: absolute
+        bottom: 30px
+        a
+            width: 60%
+            background: $color
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 10px 20px
+            color: white
+            text-decoration: none
+            font-size: 20px
+
+header
+    width: 100%
+    z-index: 100
+    .container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        img
+            width: 80px
+        .links
+            display: flex
+            gap: 20px
+            a
+                text-decoration: none
+                font-size: 28px
+                color: $color
+                transition: all 0.9s ease
+            a:hover
+                color: black
+            .router-link-active
+                text-decoration: underline
+                color: black
+            .cartIcon
+                cursor: pointer
+                color: #000
+                font-size: 18px
+                img
+                    width: 30px
+
+footer
+    margin-top: 30px
+    .container
+        padding: 10px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        img
+            width: 60px
+        .links
+            display: flex
+            flex-direction: column
+            justify-content: center
+            gap: 10px
+            a
+                text-decoration: none
+                font-size: 20px
+                text-align: center
+                color: $color
+                transition: all 0.9s ease
+            a:hover
+                color: black
+
+.baner
+    height: 100vh
+    background-size: cover
+    .container
+        display: flex
+        height: 100%
+        align-items: center
+        z-index: 2
+        h2
+            color: white
+            font-size: 50px
+            width: 15em
+            background: #0000006c
+            padding: 20px
+            border-radius: 10px
+
+.home
+    img
+        width: 400px
+        border-radius: 10px
+        float: left
+        margin: 0 15px 0 0
+    p
+        font-size: 22px
+
+.products
+    min-height: 100vh
+    h2
+        text-align: center
+        font-size: 34px
+    .products-grid
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 20px
+        svg
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        div
+            width: 300px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            img
+                width: 300px
+                height: 200px
+                object-fit: cover
+            h4
+                margin: 10px 0
+                font-size: 28px
+                color: $color
+                text-align: center
+            p
+                text-align: center
+                margin-top: 0
+            a
+                background: $color
+                cursor: pointer
+                padding: 10px 20px
+                color: white
+                border-radius: 10px
+                border: none
+                margin: 0 auto
+                text-decoration: none
+
+.product
+    min-height: 80vh
+    .container
+        padding-top: 50px
+        .content
+            display: flex
+            gap: 5px
+            min-height: 533px
+            .imgs
+                display: flex
+                width: 800px
+                flex-wrap: wrap
+                gap: 5px
+                position: relative
+                button
+                    position: absolute
+                    background: none
+                    border: none
+                    color: white
+                    font-size: 40px
+                    top: 250px
+                    cursor: pointer
+                .next
+                    right: 10px
+                .back
+                    left: 10px
+                .active
+                    width: 800px
+                    object-fit: cover
+                    cursor: default
+                    aspect-ratio: 15 / 10
+                    order: 0
+                img
+                    width: 196px
+                    cursor: pointer
+                    aspect-ratio: 15 / 10
+                    object-fit: cover
+                    order: 1
+                .bactive
+                    outline: 3px solid black
+                    opacity: 0.7
+            .wrap
+                height: 533px
+                position: relative
+                margin-left: 5px
+            .infos
+                position: relative
+                width: 350px
+                margin-bottom: 20px
+                h1
+                    margin: 0
+                    font-size: 50px
+                h3
+                    font-size: 40px
+                    margin: 40px 0 20px
+                .variants
+                    display: flex
+                    gap: 10px
+                    margin-bottom: 10px
+                    flex-direction: column
+                    h5
+                        margin: 0
+                        font-size: 18px
+                        text-transform: capitalize
+                    div
+                        display: flex
+                        gap: 10px
+                        button
+                            background: #1b3416cc
+                            border: none
+                            font-family: $font
+                            color: white
+                            padding: 10px 15px
+                            border-radius: 10px
+                            font-size: 16px
+                            cursor: pointer
+                            transition: background 0.9s ease
+                        .active
+                            background: #000000cc
+                        .notchecked
+                            background: #4b0a0acc
+                        .notchecked + .active
+                            background: #000000cc
+                .count
+                    display: flex
+                    margin-top: 20px
+                    p
+                        width: 30px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        height: 30px
+                        margin: 0
+                    button
+                        width: 30px
+                        background: #1b3416cc
+                        border: none
+                        color: white
+                        border-radius: 5px
+                        cursor: pointer
+                        height: 30px
+
+            .addToCart
+                background: #000000cc
+                color: white
+                font-family: $font
+                border: none
+                padding: 15px 30px
+                font-size: 30px
+                border-radius: 10px
+                cursor: pointer
+                transition: all 0.4s ease
+            .addToCart:hover
+                background: #1b3416cc
+.load
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.checkoutSection
+    height: 100vh
+    .container
+        display: grid
+        grid-template-columns: 0.6fr 1fr
+        gap: 20px
+        .shippinfos
+            form
+                display: grid
+                gap: 10px
+                margin-bottom: 20px
+                input
+                    padding: 7px 10px
+                    background: #454343
+                    border: none
+                    color: white
+                input:focus-visible
+                    outline: 2px solid #36aa32
+                label
+                    display: flex
+                    flex-direction: column
+                    width: 100%
+                    text-transform: uppercase
+
+                .name
+                    display: flex
+                    justify-content: space-between
+                    width: 100%
+                    gap: 10px
+                    input
+                        width: 100%
+                button
+                    padding: 10px 0
+                    background: none
+                    border: 2px solid $color
+                    cursor: pointer
+                    transition: all 0.4s ease
+                button:hover
+                    background: #f6fff6
+            .cartCart
+                input
+                    text-align: center
+                    font-size: $font
+                .name
+                    select
+                        padding: 7px 10px
+                        width: 100%
+                        background: #454343
+                        border: none
+                        color: white
+                    select:focus-visible
+                        outline: 2px solid #36aa32
+
+        .cartProducts
+            background: #222b22
+            border-radius: 10px
+            padding: 30px
+            color: white
+            height: 100%
+            h2
+                margin: 0
+            .cartProd
+                display: grid
+                overflow: scroll
+                overflow-x: hidden
+                height: 60vh
+                .prod
+                    display: flex
+                    gap: 10px
+                    padding: 10px
+                    margin-bottom: 20px
+                    background: white
+                    color: black
+                    width: 100%
+                    height: 150px
+                    position: relative
+                    border-radius: 3px
+                    img
+                        width: 130px
+                        height: 130px
+                        aspect-ratio: 1/1
+                        object-fit: cover
+                        border-radius: 3px
+                    .infos
+                        display: flex
+                        flex-direction: column
+                        gap: 5px
+                        border: none
+                        width: 70%
+                        .options
+                            display: flex
+                            div
+                                border: 1px solid $color
+                                padding: 1px 5px
+                                border-radius: 3px
+                        p
+                            margin: 3px 0
+                            font-size: 16px
+                        h5
+                            margin: 0
+                            font-size: 30px
+                            width: 80%
+                        .quantitity
+                            border: none
+                            display: flex
+                            p
+                                width: 30px
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                            button
+                                width: 30px
+                                height: 30px
+                                background: none
+                                border: 1px solid black
+                                cursor: pointer
+                                transition: all 0.9s ease
+                            button:hover
+                                border: 1px solid $color
+                    .delete
+                        border: none
+                        cursor: pointer
+                        width: 20px
+                        position: absolute
+                        right: 20px
+.payLoad
+    position: fixed
+    width: 100vw
+    height: 100vh
+    background: #00000050
+    top: 0
+    z-index: 1000
+    display: flex
+    justify-content: center
+    align-items: center
