@@ -3,7 +3,7 @@
     <Title>
       {{ data.name }}
     </Title>
-    <Meta name="twitter:image" :content="images[0].url" />
+    <Meta name="og:image" :content="images[0].url" />
   </Head>
   <section class="product">
     <div class="container">
