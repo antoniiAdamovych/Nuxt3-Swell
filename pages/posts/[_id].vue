@@ -4,7 +4,6 @@
       {{ data.name }}
     </Title>
     <Meta name="twitter:image" :content="images[0].url" />
-    <Meta name="twitter:description" :content="data.description" />
   </Head>
   <section class="product">
     <div class="container">
