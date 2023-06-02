@@ -1,10 +1,10 @@
 <template>
-  <Head>
+  <Head v-if="images">
     <Title>
-      Test
+      {{ data.name }}
     </Title>
-    <Meta name="twitter:image" content="https://images.unsplash.com/photo-1608541737042-87a12275d313?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmlrZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" />
-    <Meta name="twitter:description" content="test" />
+    <Meta name="twitter:image" :content="images[0].url" />
+    <Meta name="twitter:description" :content="data.description" />
   </Head>
   <section class="product">
     <div class="container">
