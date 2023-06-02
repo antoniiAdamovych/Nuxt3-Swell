@@ -4,6 +4,7 @@
       {{ data.name }}
     </Title>
     <Meta name="og:image" :content="data.images[0].file.url" />
+    <Meta:desc>{{ desc }}</Meta:desc>
   </Head>
   <section class="product">
     <div class="container">
@@ -148,7 +149,8 @@ export default {
       variant: {},
       quan: 1,
       notChecked: false,
-      images: {}
+      images: {},
+      desc: ''
     }
   },
   async created() {
@@ -233,6 +235,10 @@ export default {
         this.notChecked = true
       }
     }
+  },
+  mounted() {
+    const spanElement = document.getElementById('isPasted');
+    this.desc = spanElement.textContent;
   }
 }
 </script>
