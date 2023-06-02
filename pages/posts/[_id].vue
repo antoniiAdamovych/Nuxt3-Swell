@@ -1,7 +1,7 @@
 <template>
   <Head v-if="data">
     <Title>
-      {{ data.name }}
+      {{ data.meta_title }}
     </Title>
     <Meta name="og:image" :content="data.images[0].file.url" />
     <Meta name="description" :content="data.meta_description" />
