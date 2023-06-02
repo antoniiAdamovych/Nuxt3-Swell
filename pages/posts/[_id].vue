@@ -138,6 +138,7 @@ export default {
     const slug = route.params._id
     swell.init('autos', 'pk_4fiDORAqYgrTwTPXsYWwMZ30c7ZBlJE2');
     const data = await swell.products.get(slug);
+    console.log(data)
     return {
       data: data
     }
