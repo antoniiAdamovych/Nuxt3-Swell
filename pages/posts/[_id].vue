@@ -4,7 +4,6 @@
       {{ data.name }}
     </Title>
     <Meta name="og:image" :content="data.images[0].file.url" />
-    <Meta name="twitter:description" :content="desc" />
   </Head>
   <section class="product">
     <div class="container">
@@ -236,10 +235,6 @@ export default {
       }
     }
   },
-  mounted() {
-    const spanElement = document.getElementById('isPasted');
-    this.desc = spanElement.textContent;
-  }
 }
 </script>
 
